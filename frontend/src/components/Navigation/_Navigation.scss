@@ -1,0 +1,67 @@
+.navigation {
+  background-color: #FCFCFC;
+  width: 80px;
+  height: 100vh;
+  position: fixed;
+
+  &__logo {
+    height: 72px;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__links {
+    color: #82898F;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    border-right: 1px solid #CFD5D9;
+    height: 100%;
+  }
+
+  &__link {
+    &--active {
+      background-color: #DBE0E4;
+      border-bottom: 1px solid #CFD5D9;
+
+      span {
+        font-weight: bold;
+        color: black;
+
+        svg {
+          path {
+            fill: #E31E26;
+          }
+        }
+      }
+
+    }
+
+    transition: background-color .3s;
+
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 8px;
+
+      margin-bottom: 2px;
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+
+      span {
+        text-align: center;
+      }
+    }
+
+    &:hover {
+      background-color: #DBE0E4;
+    }
+  }
+}

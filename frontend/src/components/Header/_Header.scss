@@ -1,0 +1,42 @@
+.header {
+  position: sticky;
+  top: 0;
+  background-color: #0C2747;
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-right: 24px;
+  padding-left: 24px;
+
+  &__text {
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  &__link {
+    color: #BBC0C5;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    display: flex;
+    gap: 24px;
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      span {
+        margin-top: 2px;
+      }
+    }
+  }
+}

@@ -1,0 +1,123 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  animation: fadeIn 0.2s ease;
+}
+
+.modal {
+  background: white;
+  border-radius: 10px;
+  max-width: 548px;
+  min-height: 228px;
+  width: 100%;
+  max-height: 90vh;
+  overflow: hidden;
+  animation: slideIn 0.2s ease;
+  padding: 32px;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__header {
+
+  }
+
+  &__title {
+    color: black;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px; /* 118.182% */
+    margin-bottom: 20px;
+  }
+
+  &__close {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 32px;
+    height: 32px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' fill='none'%3E%3Cpath d='M8.39052 23.4755C7.86983 22.9548 7.86983 22.1105 8.39052 21.5899L21.5898 8.39052C22.1105 7.86983 22.9548 7.86983 23.4755 8.39052C23.9962 8.91122 23.9962 9.75544 23.4755 10.2761L10.2761 23.4755C9.75544 23.9962 8.91122 23.9962 8.39052 23.4755Z' fill='black'/%3E%3Cpath d='M23.4755 23.4755C23.9962 22.9548 23.9962 22.1105 23.4755 21.5899L10.2762 8.39052C9.75546 7.86983 8.91124 7.86983 8.39054 8.39052C7.86984 8.91122 7.86984 9.75544 8.39054 10.2761L21.5899 23.4755C22.1106 23.9962 22.9548 23.9962 23.4755 23.4755Z' fill='black'/%3E%3C/svg%3E");
+  }
+
+  &__body {
+    max-width: 360px;
+    margin-bottom: 24px;
+  }
+
+  &__message {
+    color: black;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 125% */
+  }
+
+  &__footer {
+    display: flex;
+    gap: 12px;
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 128px;
+    height: 208px;
+    background: linear-gradient(270deg, #DEFDDF 43.36%, #FFF 100%);
+  }
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
